@@ -7,7 +7,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
  * Automatically generated via CLI.
  */
 class UserModel extends Model {
-    protected $table = 'users';
+    protected $table = 'userAcha';
     protected $primary_key = 'id';
 
     protected $fillable = [
@@ -24,7 +24,7 @@ class UserModel extends Model {
 
     public function findByEmail($email)
     {
-        return $this->db->table('users')
+        return $this->db->table('userAcha')
                         ->where('email', $email)
                         ->get();
     }
@@ -32,13 +32,13 @@ class UserModel extends Model {
     // check if username already exists
     public function findByUsername($username)
     {
-        return $this->db->table('users')
+        return $this->db->table('userAcha')
                         ->where('username', $username)
                         ->get();
     }
 
     public function allUser(){
-         return $this->db->table('users')
+         return $this->db->table(userAcha')
                         ->where('role', 'user')
                         ->get();
 
