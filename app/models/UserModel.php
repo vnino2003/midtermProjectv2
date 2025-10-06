@@ -38,7 +38,7 @@ class UserModel extends Model {
     }
 
     public function allUser(){
-         return $this->db->table(userAcha')
+         return $this->db->table('userAcha')
                         ->where('role', 'user')
                         ->get();
 
