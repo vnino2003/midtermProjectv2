@@ -124,7 +124,8 @@ class User_Controller extends Controller {
             'username'   => $username,
             'email'      => $email,
             'password'   => password_hash($password, PASSWORD_DEFAULT),
-            'profile_picture' => $profilePic
+            'profile_picture' => $profilePic,
+            'role' => "user"
         ]);
 
         setMessage('success', 'Account created successfully!');
